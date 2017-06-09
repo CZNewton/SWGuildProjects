@@ -1,0 +1,5 @@
+Order Number,Customer Name,State,Tax Rate,Material,Area,costPerSqFt,LaborPerSqFt,MaterialTotalCost,LaborTotalCost,TaxTotal,Total,Date
+1.0,Bob O'Billy,VA,0.04,Hardwood,50,2.00,1.50,100.00,75.00,7.0000,182.0000,01122000
+2.0,Rob O'Reilly,CA,0.05,Laminate,60,1.50,1.75,90.00,105.00,9.7500,204.7500,01122000
+3.0,Caitlyn Washire,VM,0.03,Air,40,2.50,1.30,100.00,52.00,4.5600,156.5600,01122000
+4.0,Hedden Solse,MN,0.02,Hope,50,3.00,1.00,150.00,50.00,4.0000,204.0000,01122000

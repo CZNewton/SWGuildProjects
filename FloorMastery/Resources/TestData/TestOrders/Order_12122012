@@ -1,0 +1,4 @@
+Order Number,Customer Name,State,Tax Rate,Material,Area,costPerSqFt,LaborPerSqFt,MaterialTotalCost,LaborTotalCost,TaxTotal,Total,Date
+1,Frank De'Beon,FL,0.10,Glass,10,1.00,2.00,10,20,3,33,12122012
+2,Gershrif Halisun,GA,0.10,Dreams,20,3.00,1.00,60,20,8,88,12122012
+3,Terdy Sullihans,NC,0.10,Stuff,50,2.00,6.00,100,300,40,440,12122012

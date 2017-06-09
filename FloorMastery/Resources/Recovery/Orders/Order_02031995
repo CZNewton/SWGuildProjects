@@ -1,0 +1,3 @@
+Order Number,Customer Name,State,Tax Rate,Material,Area,costPerSqFt,LaborPerSqFt,MaterialTotalCost,LaborTotalCost,TaxTotal,Total,Date
+1,Walt Washire,VM,0.03,Stuff,40,2.50,1.30,100,52,4.56,156.56,02031995
+2,Walt Washire,VM,0.02,Dreams,50,3.00,1.00,150,50,4,204,02031995

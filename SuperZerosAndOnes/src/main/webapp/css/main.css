@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 8, 2017, 7:10:49 PM
+    Author     : apprentice
+*/
+
+body {
+    background-image: url("../img/SuperBg2.jpg");
+}
+
+div.body {
+    opacity: 0.9;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+a {
+    cursor: pointer;
+}
+
+div#input {
+    margin: 50px;
+}
+
+h3 {
+    text-align: center;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop  
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+    
+    <!--<bean id="scanner" class="java.util.Scanner"/>-->
+    <bean id="uView" class="com.sg.VendingMachine2_0.View.VendViewImpl"/>
+        <!--<constructor-arg ref="scanner"/>
+    </bean>-->
+    <bean id="uDAO" class="com.sg.VendingMachine2_0.DAO.VendDAOImpl"/>
+    <bean id="uService" class="com.sg.VendingMachine2_0.Service.VendServImpl">
+        <constructor-arg ref="uDAO"/>
+    </bean>
+    <bean id="start" class="com.sg.Vending2_0.controller.VendControl">
+        <constructor-arg ref="uView"/>
+        <constructor-arg ref="uService"/>
+    </bean>
+    <bean id="LogAspect" class="com.sg.VendingMachine2_0.Advice.LoggingAdvice_Spring"/>
+    <aop:config>
+        <aop:aspect id="aspAfterThrowing" ref="LogAspect">
+            <aop:pointcut id="afterThrowEither" expression="execution(* com.sg.VendingMachine2_0.Service.VendServ.transaction(..))"/>
+            <aop:after-throwing
+                method="exceptionLogFund"
+                throwing="noFund"
+                pointcut-ref="afterThrowEither"
+                
+            />
+            <aop:after-throwing
+                method="exceptionLogStock"
+                throwing="noStock"
+                pointcut-ref="afterThrowEither"
+                
+            />
+        </aop:aspect>
+    </aop:config>
+</beans>

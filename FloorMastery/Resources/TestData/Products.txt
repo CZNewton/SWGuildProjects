@@ -1,0 +1,3 @@
+Product,PriceperSqFt,LaborCostperSqFt
+Glass,0.10,0.01
+Carbon Nano-Tubes,500,7000

@@ -1,0 +1,3 @@
+State, Tax Rate
+Fl,2.2
+NC,1.1

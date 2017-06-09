@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>That game we did one time</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="newcss.css" rel="stylesheet" type="text/css"/>
+        
+        <script>
+            function choose(choice)
+            {
+                var wins;
+                var loss;
+                var peaLocation = Math.floor((Math.random()*3)+1);
+                if (choice===peaLocation) {
+                    wins = document.getElementById("win").innerHTML;
+                    wins = Number(wins);
+                    document.getElementById("win").innerHTML = wins += 1;
+                } else {
+                    loss = document.getElementById("loss").innerHTML;
+                    loss = Number(loss);
+                    document.getElementById("loss").innerHTML = loss += 1;
+                }
+                    
+            }
+            
+        </script>
+    </head>
+    <body>
+        
+        
+        <div>PICK A CUP, ANY CUP</div>
+        
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <button onclick="choose(1)"><img class="cup" src="blue-cup-hi.png"></button>
+            </div>
+            <div class="col-sm-4">
+                <button onclick="choose(2)"><img class="cup" src="blue-cup-hi.png"></button>
+            </div>
+            <div class="col-sm-4">
+                <button onclick="choose(3)"><img class="cup" src="blue-cup-hi.png"></button>
+            </div>
+        </div>
+        
+        <div>
+            <table>
+                <tr>
+                    <td>Wins:</td>
+                    <td id="win">0</td>
+                </tr>
+                <tr>
+                    <td>Losses:</td>
+                    <td id="loss">0</td>
+                </tr>
+            </table>
+        </div>
+        <script src="js/bootcamp.min.js"></script>
+    </body>
+</html>
